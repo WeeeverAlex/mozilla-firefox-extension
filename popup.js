@@ -11,6 +11,8 @@ document.getElementById('checkButton').addEventListener('click', function() {
               <p>Cookies detectados: ${response.cookies}</p>
               <p>Conexões de terceiros: ${response.thirdPartyConnections}</p>
               <p>Itens no LocalStorage: ${response.localStorageItems}</p>
+              <p>Canvas Fingerprinting detectado: ${response.canvasFingerprinting ? 'Sim' : 'Não'}</p>
+              <p>Hooks detectados: ${response.hooksDetected.length > 0 ? response.hooksDetected.join(', ') : 'Nenhum'}</p>
               <p>Pontuação de Privacidade: ${response.privacyScore}</p>
             `;
         } else {
